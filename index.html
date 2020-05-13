@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit5-03</title>
+  </head>
+  <body>
+    <h1>Type your age in the textbox below to see what kind of movies you can watch</h1>
+    <input type="text" id="textbox">
+    <button id="button">Check!</button>
+    <p id="demo"></p>
+
+  </body>
+  <script>
+  document.getElementById("button").addEventListener
+  ("click", myFunction);
+ let age;
+ function myFunction() {
+ age=document.getElementById("textbox").value;
+ if (age>=17) {
+  greeting="You can see a R rated movie alone";  
+ } else if (age>=13) {
+  greeting="You can see a PG-13 rated movie alone";  
+ }else if (age>=5) {
+  greeting="You can see a G or PG rated movie alone";
+ } else {
+ greeting="Sorry... You're too young to watch most things";
+ }
+ document.getElementById("demo").innerHTML=greeting;
+ }
+  </script>
+</html>
